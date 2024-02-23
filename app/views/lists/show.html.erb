@@ -1,0 +1,11 @@
+<p><%= link_to"My lists" lists_path%></p>
+<p><%=New List%></p>
+<h2><%= @list.name %></h2>
+<button type="button" class="btn btn-success">add a movie</button>
+
+<%= simple_form_for [@restaurant, @review] do |f| %>
+<%= f.input :rating, collection: 0..5 %>
+<%= f.input :content%>
+<%= f.submit class: 'btn btn-primary' %>
+<% end %>
+<%= link_to "See all restaurants", restaurants_path %>
